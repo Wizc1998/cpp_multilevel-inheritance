@@ -1,0 +1,19 @@
+THis is the readme file of
+a project about
+hierarchy using C++ classes
+
+to experience it, 
+1. unzip the zip file, 
+
+in linux command window,
+
+2. go in the directory,
+
+3. type command as following:
+
+g++ -o lab5 shapes.cpp main.cpp
+
+4. you will see a lab5 file in the directory, run it!
+
+
+everything are original works, by author @Weizi Cai

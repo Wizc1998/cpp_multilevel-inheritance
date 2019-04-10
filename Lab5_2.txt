@@ -1,0 +1,267 @@
+[cai.590@cse-zeta ~]$ cd cse4252/lab5
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+shapes.cpp: In function ‘void print(const Shape&)’:
+shapes.cpp:34:15: error: passing ‘const Shape’ as ‘this’ argument of ‘virtual void Shape::display()’ discards qualifiers [-fpermissive]
+     s.display();
+               ^
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+shapes.cpp: In member function ‘virtual void Shape::display()’:
+shapes.cpp:16:26: error: ‘radius’ was not declared in this scope
+    cout << "Circle: " << radius << " | Area = "<< Area << endl;}
+                          ^
+shapes.cpp: In function ‘void print(const Shape&)’:
+shapes.cpp:35:15: error: passing ‘const Shape’ as ‘this’ argument of ‘virtual void Shape::display()’ discards qualifiers [-fpermissive]
+     s.display();
+               ^
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+shapes.cpp: In function ‘void print(const Shape&)’:
+shapes.cpp:34:15: error: passing ‘const Shape’ as ‘this’ argument of ‘virtual void Shape::display()’ discards qualifiers [-fpermissive]
+     s.display();
+               ^
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+[cai.590@cse-zeta lab5]$ cd cse4252/lab5
+-bash: cd: cse4252/lab5: No such file or directory
+[cai.590@cse-zeta lab5]$ a.out
+var = 0
+[cai.590@cse-zeta lab5]$ ^C
+[cai.590@cse-zeta lab5]$ cd cse4252/lab5
+-bash: cd: cse4252/lab5: No such file or directory
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+shapes.cpp: In function ‘void print(const Shape&)’:
+shapes.cpp:34:15: error: passing ‘const Shape’ as ‘this’ argument of ‘virtual void Shape::display()’ discards qualifiers [-fpermissive]
+     s.display();
+               ^
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+[cai.590@cse-zeta lab5]$ a.out
+Circle: 10 | Area = 4196336
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+shapes.cpp: In constructor ‘Circle::Circle(int)’:
+shapes.cpp:26:9: error: invalid use of member function (did you forget the ‘()’ ?)
+    area = radius*radius*Pi;
+         ^
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+[cai.590@cse-zeta lab5]$ a.out
+Circle: 10 | Area = 300
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+[cai.590@cse-zeta lab5]$ a.out
+Circle: 10 | Area = 314.159
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+[cai.590@cse-zeta lab5]$ a.out
+Circle: 10 | Area = 314.159
+Rectangle: 3, 4 | Area = 12
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+shapes.cpp: In member function ‘virtual void Shape::display() const’:
+shapes.cpp:15:53: error: ‘Area’ was not declared in this scope
+   virtual void display() const {cout << "var = " << Area << endl;}
+                                                     ^
+shapes.cpp: In member function ‘virtual void Circle::display() const’:
+shapes.cpp:31:55: error: request for member ‘area’ in ‘this’, which is of pointer type ‘const Circle* const’ (maybe you meant to use ‘->’ ?)
+   cout << "Circle: " << radius << " | Area = "<< this.area() << endl;
+                                                       ^
+shapes.cpp: In member function ‘virtual void Rectangle::display() const’:
+shapes.cpp:48:75: error: request for member ‘area’ in ‘this’, which is of pointer type ‘const Rectangle* const’ (maybe you meant to use ‘->’ ?)
+   cout << "Rectangle: " << length << ", " << width << " | Area = "<< this.area() << endl;
+                                                                           ^
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+shapes.cpp: In member function ‘virtual void Shape::display() const’:
+
+   cout << "Rectangle: " << length << ", " << width << " | Area = "<< this.area() << endl;
+                                                                           ^
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+shapes.cpp: In member function ‘virtual void Shape::display() const’:
+shapes.cpp:15:53: error: ‘Area’ was not declared in this scope
+   virtual void display() const {cout << "var = " << Area << endl;}
+                                                     ^
+shapes.cpp: In member function ‘virtual void Circle::display() const’:
+shapes.cpp:31:61: error: passing ‘const Circle’ as ‘this’ argument of ‘virtual float Circle::area()’ discards qualifiers [-fpermissive]
+   cout << "Circle: " << radius << " | Area = "<< this->area() << endl;
+                                                             ^
+shapes.cpp: In member function ‘virtual void Rectangle::display() const’:
+shapes.cpp:48:81: error: passing ‘const Rectangle’ as ‘this’ argument of ‘virtual float Rectangle::area()’ discards qualifiers [-fpermissive]
+   cout << "Rectangle: " << length << ", " << width << " | Area = "<< this->area() << endl;
+                                                                                 ^
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+shapes.cpp: In member function ‘virtual void Shape::display() const’:
+shapes.cpp:15:53: error: ‘Area’ was not declared in this scope
+   virtual void display() const {cout << "var = " << Area << endl;}
+                                                     ^
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+[cai.590@cse-zeta lab5]$ a.out
+Circle: 10 | Area = 314.159
+Rectangle: 3, 4 | Area = 12
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+[cai.590@cse-zeta lab5]$ a.out
+Circle: 10 | Area = 314.159
+Rectangle: 3, 4 | Area = 12
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+shapes.cpp: In function ‘int main()’:
+shapes.cpp:73:25: error: no matching function for call to ‘Quadrilateral::Quadrilateral(int, int)’
+     Quadrilateral q(2, 4); //Uncommenting this line should cause an error
+                         ^
+shapes.cpp:73:25: note: candidates are:
+shapes.cpp:55:7: note: Quadrilateral::Quadrilateral()
+ class Quadrilateral {
+       ^
+shapes.cpp:55:7: note:   candidate expects 0 arguments, 2 provided
+shapes.cpp:55:7: note: Quadrilateral::Quadrilateral(const Quadrilateral&)
+shapes.cpp:55:7: note:   candidate expects 1 argument, 2 provided
+[cai.590@cse-zeta lab5]$ a.out
+Circle: 10 | Area = 314.159
+Rectangle: 3, 4 | Area = 12
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+shapes.cpp: In function ‘int main()’:
+shapes.cpp:73:17: error: no matching function for call to ‘Shape::Shape(int, int)’
+     Shape q(2, 4); //Uncommenting this line should cause an error
+                 ^
+shapes.cpp:73:17: note: candidates are:
+shapes.cpp:8:7: note: Shape::Shape()
+ class Shape {
+       ^
+shapes.cpp:8:7: note:   candidate expects 0 arguments, 2 provided
+shapes.cpp:8:7: note: Shape::Shape(const Shape&)
+shapes.cpp:8:7: note:   candidate expects 1 argument, 2 provided
+[cai.590@cse-zeta lab5]$ a.out
+Circle: 10 | Area = 314.159
+Rectangle: 3, 4 | Area = 12
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+[cai.590@cse-zeta lab5]$ a.out
+Circle: 10 | Area = 314.159
+Rectangle: 3, 4 | Area = 12
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+[cai.590@cse-zeta lab5]$ a.out
+Circle: 10 | Area = 314.159
+Rectangle: 3, 4 | Area = 12
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+shapes.cpp:67:32: error: ISO C++ forbids declaration of ‘Rectangle’ with no type [-fpermissive]
+
+shapes.cpp:67:32: error: ISO C++ forbids declaration of ‘Rectangle’ with no type [-fpermissive]
+   Rectangle(int l, int h, int s){
+                                ^
+shapes.cpp:71:3: error: declaration of ‘int Trapezoid::Rectangle(int, int, int)’ [-fpermissive]
+   }
+   ^
+shapes.cpp:35:7: error: changes meaning of ‘Rectangle’ from ‘class Rectangle’ [-fpermissive]
+ class Rectangle : public Shape {
+       ^
+shapes.cpp: In member function ‘virtual void Trapezoid::display() const’:
+shapes.cpp:76:46: error: ‘width’ was not declared in this scope
+   cout << "Trapezoid: " << length << ", " << width << ", " << side << " | Area = "<< this->area() << endl;
+                                              ^
+shapes.cpp: In function ‘int main()’:
+shapes.cpp:90:27: error: no matching function for call to ‘Trapezoid::Trapezoid(int, int, int)’
+     Trapezoid trap(3, 4, 5);
+                           ^
+shapes.cpp:90:27: note: candidates are:
+shapes.cpp:63:7: note: Trapezoid::Trapezoid()
+ class Trapezoid : public Quadrilateral {
+       ^
+shapes.cpp:63:7: note:   candidate expects 0 arguments, 3 provided
+shapes.cpp:63:7: note: Trapezoid::Trapezoid(const Trapezoid&)
+shapes.cpp:63:7: note:   candidate expects 1 argument, 3 provided
+shapes.cpp:94:15: error: invalid initialization of reference of type ‘const Shape&’ from expression of type ‘Trapezoid’
+     print(trap);
+               ^
+shapes.cpp:81:6: error: in passing argument 1 of ‘void print(const Shape&)’
+ void print(const Shape& s) {
+      ^
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+shapes.cpp:67:32: error: ISO C++ forbids declaration of ‘Rectangle’ with no type [-fpermissive]
+   Rectangle(int l, int h, int s){
+                                ^
+shapes.cpp:71:3: error: declaration of ‘int Trapezoid::Rectangle(int, int, int)’ [-fpermissive]
+   }
+   ^
+shapes.cpp:35:7: error: changes meaning of ‘Rectangle’ from ‘class Rectangle’ [-fpermissive]
+ class Rectangle : public Shape {
+       ^
+shapes.cpp: In member function ‘virtual void Trapezoid::display() const’:
+shapes.cpp:76:46: error: ‘width’ was not declared in this scope
+   cout << "Trapezoid: " << length << ", " << width << ", " << side << " | Area = "<< this->area() << endl;
+                                              ^
+shapes.cpp: In function ‘int main()’:
+shapes.cpp:90:27: error: no matching function for call to ‘Trapezoid::Trapezoid(int, int, int)’
+     Trapezoid trap(3, 4, 5);
+                           ^
+shapes.cpp:90:27: note: candidates are:
+shapes.cpp:63:7: note: Trapezoid::Trapezoid()
+ class Trapezoid : public Quadrilateral {
+       ^
+shapes.cpp:63:7: note:   candidate expects 0 arguments, 3 provided
+shapes.cpp:63:7: note: Trapezoid::Trapezoid(const Trapezoid&)
+shapes.cpp:63:7: note:   candidate expects 1 argument, 3 provided
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+shapes.cpp:63:40: error: expected ‘{’ before ‘:’ token
+ class Trapezoid : public Quadrilateral : public Shape {
+                                        ^
+shapes.cpp:63:40: error: expected unqualified-id before ‘:’ token
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+shapes.cpp:67:32: error: ISO C++ forbids declaration of ‘Rectangle’ with no type [-fpermissive]
+   Rectangle(int l, int h, int s){
+                                ^
+
+   Rectangle(int l, int h, int s){
+                                ^
+shapes.cpp:71:3: error: declaration of ‘int Trapezoid::Rectangle(int, int, int)’ [-fpermissive]
+   }
+   ^
+shapes.cpp:35:7: error: changes meaning of ‘Rectangle’ from ‘class Rectangle’ [-fpermissive]
+ class Rectangle : public Shape {
+       ^
+shapes.cpp: In member function ‘virtual void Trapezoid::display() const’:
+shapes.cpp:76:46: error: ‘width’ was not declared in this scope
+   cout << "Trapezoid: " << length << ", " << width << ", " << side << " | Area = "<< this->area() << endl;
+                                              ^
+shapes.cpp: In function ‘int main()’:
+shapes.cpp:90:27: error: no matching function for call to ‘Trapezoid::Trapezoid(int, int, int)’
+     Trapezoid trap(3, 4, 5);
+                           ^
+shapes.cpp:90:27: note: candidates are:
+shapes.cpp:63:7: note: Trapezoid::Trapezoid()
+ class Trapezoid : public Quadrilateral {
+       ^
+shapes.cpp:63:7: note:   candidate expects 0 arguments, 3 provided
+shapes.cpp:63:7: note: Trapezoid::Trapezoid(const Trapezoid&)
+shapes.cpp:63:7: note:   candidate expects 1 argument, 3 provided
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+shapes.cpp:67:32: error: ISO C++ forbids declaration of ‘Rectangle’ with no type [-fpermissive]
+   Rectangle(int l, int h, int s){
+                                ^
+shapes.cpp:71:3: error: declaration of ‘int Trapezoid::Rectangle(int, int, int)’ [-fpermissive]
+   }
+   ^
+shapes.cpp:35:7: error: changes meaning of ‘Rectangle’ from ‘class Rectangle’ [-fpermissive]
+ class Rectangle : public Shape {
+       ^
+shapes.cpp: In member function ‘virtual void Trapezoid::display() const’:
+shapes.cpp:76:46: error: ‘width’ was not declared in this scope
+   cout << "Trapezoid: " << length << ", " << width << ", " << side << " | Area = "<< this->area() << endl;
+                                              ^
+shapes.cpp: In function ‘int main()’:
+shapes.cpp:90:27: error: no matching function for call to ‘Trapezoid::Trapezoid(int, int, int)’
+     Trapezoid trap(3, 4, 5);
+                           ^
+shapes.cpp:90:27: note: candidates are:
+shapes.cpp:63:7: note: Trapezoid::Trapezoid()
+ class Trapezoid : public Quadrilateral {
+       ^
+shapes.cpp:63:7: note:   candidate expects 0 arguments, 3 provided
+shapes.cpp:63:7: note: Trapezoid::Trapezoid(const Trapezoid&)
+shapes.cpp:63:7: note:   candidate expects 1 argument, 3 provided
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+shapes.cpp: In member function ‘virtual void Trapezoid::display() const’:
+shapes.cpp:76:46: error: ‘width’ was not declared in this scope
+   cout << "Trapezoid: " << length << ", " << width << ", " << side << " | Area = "<< this->area() << endl;
+                                              ^
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+shapes.cpp: In member function ‘virtual void Trapezoid::display() const’:
+shapes.cpp:76:46: error: ‘width’ was not declared in this scope
+   cout << "Trapezoid: " << length << ", " << width << ", " << side << " | Area = "<< this->area() << endl;
+                                              ^
+[cai.590@cse-zeta lab5]$ g++ shapes.cpp
+[cai.590@cse-zeta lab5]$ a.out
+Circle: 10 | Area = 314.159
+Rectangle: 3, 4 | Area = 12
+Trapezoid: 3, 4, 5 | Area = 16
+[cai.590@cse-zeta lab5]$ ^C
+[cai.590@cse-zeta lab5]$ ^C
+[cai.590@cse-zeta lab5]$ 
