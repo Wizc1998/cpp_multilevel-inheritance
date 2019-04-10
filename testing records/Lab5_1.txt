@@ -1,0 +1,90 @@
+[cai.590@cse-zeta ~]$ cd cse4252/lab5
+[cai.590@cse-zeta lab5]$ ls
+classes.cpp
+[cai.590@cse-zeta lab5]$ g++ classes.cpp
+[cai.590@cse-zeta lab5]$ ls
+a.out  classes.cpp
+[cai.590@cse-zeta lab5]$ a.out
+var = 1
+var = 0
+[cai.590@cse-zeta lab5]$ g++ classes.cpp
+[cai.590@cse-zeta lab5]$ a.out
+var = 1
+var = -2
+[cai.590@cse-zeta lab5]$ g++ classes.cpp
+[cai.590@cse-zeta lab5]$ a.out
+var = 1
+var = -2
+[cai.590@cse-zeta lab5]$ a.out
+var = 1
+var = -2
+[cai.590@cse-zeta lab5]$ g++ classes.cpp
+[cai.590@cse-zeta lab5]$ a.out
+var = 1
+varB = 0
+var = -2
+varB = 0
+[cai.590@cse-zeta lab5]$ g++ classes.cpp
+[cai.590@cse-zeta lab5]$ a.out
+var = 0
+var = 0
+var = 1
+varB = 0
+var = -2
+varB = 0
+[cai.590@cse-zeta lab5]$ g++ classes.cpp
+[cai.590@cse-zeta lab5]$ a.out
+var = 1
+varB = 0
+var = -2
+varB = 0
+[cai.590@cse-zeta lab5]$ g++ classes.cpp
+classes.cpp: In function ‘int main()’:
+classes.cpp:33:11: error: expected ‘:’ before ‘;’ token
+   ptr = &b;
+           ^
+classes.cpp:33:11: error: expected primary-expression before ‘;’ token
+[cai.590@cse-zeta lab5]$ g++ classes.cpp
+[cai.590@cse-zeta lab5]$ a.out
+var = 0
+var = 1
+varB = 0
+var = -2
+varB = 0
+[cai.590@cse-zeta lab5]$ g++ classes.cpp
+[cai.590@cse-zeta lab5]$ a.out
+var = 0
+varB = 0
+var = 1
+varB = 0
+var = -2
+varB = 0
+[cai.590@cse-zeta lab5]$ g++ classes.cpp
+classes.cpp: In function ‘int main()’:
+classes.cpp:33:6: error: ‘class A’ has no member named ‘increament’
+   a1.increament();
+      ^
+[cai.590@cse-zeta lab5]$ g++ classes.cpp
+[cai.590@cse-zeta lab5]$ a.out
+var = 1
+[cai.590@cse-zeta lab5]$ g++ classes.cpp
+[cai.590@cse-zeta lab5]$ a.out
+var = 2
+[cai.590@cse-zeta lab5]$ g++ classes.cpp
+[cai.590@cse-zeta lab5]$ a.out
+var = 6
+[cai.590@cse-zeta lab5]$ g++ classes.cpp
+classes.cpp: In function ‘int main()’:
+classes.cpp: In function ‘int main()’:
+classes.cpp:38:7: error: ‘A’ is an inaccessible base of ‘B’
+   ptr = &b;
+       ^
+[cai.590@cse-zeta lab5]$ a.out^C
+[cai.590@cse-zeta lab5]$ g++ classes.cpp
+[cai.590@cse-zeta lab5]$ a.out
+var = 0
+varB = 0
+var = 1
+var = 0
+[cai.590@cse-zeta lab5]$ ^C
+[cai.590@cse-zeta lab5]$ 
